@@ -1,0 +1,5 @@
+<!--pages/Demo/Demo.wxml-->
+<text>pages/Demo/Demo.wxml</text>
+<input type="text"  bindinput="handleInput">
+    
+</input>

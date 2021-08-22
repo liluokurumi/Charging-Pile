@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/index/index",
+    "pages/Demo/Demo",
+    "pages/mine/mine",
+    "pages/electricity/electricity",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小程序",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "",
+    "selectedColor": "",
+    "backgroundColor": "",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "icon/home.png",
+        "selectedIconPath": "icon/_home.png"
+      },
+      {
+        "pagePath": "pages/electricity/electricity",
+        "text": "充电",
+        "iconPath": "icon/electricity.png",
+        "selectedIconPath": "icon/_electricity.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "icon/my.png",
+        "selectedIconPath": "icon/_my.png"
+      }
+    ]
+  },
+  
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,6 @@
+.tips{
+    height:10rpx;
+    font-size:30px;
+    line-height:600rpx;
+    text-align: center;
+  }

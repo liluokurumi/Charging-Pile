@@ -1,0 +1,39 @@
+.scanButton {
+    margin-top: 70%;
+    height: 500rpx;
+    border: 0 solid #ff0000;
+    border-radius: 400px; 
+   font-size:0;
+  }
+  
+.image{
+    justify-content: center;        
+    align-items:center;   
+    margin-left: -57rpx;
+    margin-top: -20rpx;
+    display: flex;
+    width: 500rpx;
+    height: 500rpx;
+  }
+  .countTime{
+    height:0rpx;
+    font-size:30px;
+    line-height:800rpx;
+    text-align: center;
+  }
+  .charging{
+    height:0rpx;
+    font-size:30px;
+    line-height:700rpx;
+    text-align: center;
+  }
+  .test
+  {
+    margin-top: -120%;
+  }
+  .warn{
+    height:0rpx;
+    text-align: center;
+    margin-top: 0%;
+  }
+  

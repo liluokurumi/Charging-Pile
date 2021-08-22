@@ -1,0 +1,17 @@
+<view
+  class="tips"
+  hover-class="none"
+  hover-stop-propagation="false"
+  hidden="{{isConnected}}"
+>
+  您还没有充上电哦:(
+</view>
+<view
+  class="tips"
+  hover-class="none"
+  hover-stop-propagation="false"
+  hidden="{{!isConnected}}"
+>
+  您本次花费的电费为:{{Money}}
+</view>
+
