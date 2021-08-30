@@ -6,12 +6,61 @@
 >
   您还没有充上电哦:(
 </view>
-<view
-  class="tips"
-  hover-class="none"
-  hover-stop-propagation="false"
-  hidden="{{!isConnected}}"
->
-  您本次花费的电费为:{{Money}}
+<view wx:if="{{isConnected}}">
+  <view class="VA_charge">
+    <view class="bill_data">
+      <view class="bill_data_item bill_data_content">
+        <text class="bill_data_item_title">订单编号</text>
+        <text >10000000</text>
+      </view>
+      <view class="bill_data_item bill_data_content">
+        <text class="bill_data_item_title">起始时间</text>
+        <text >10000000</text>
+      </view>
+      <view class="bill_data_item bill_data_content">
+        <text class="bill_data_item_title">电瓶车型号</text>
+        <text >2型</text>
+      </view>
+      <view class="bill_data_item bill_data_content">
+        <text class="bill_data_item_title">电池健康状况</text>
+        <text >健康</text>
+      </view>
+    </view>
+    <view class="charge_information">
+      <view class="charge_information_title">充电情况</view>
+      <view class="VA" style="width:600rpx">
+        <view class="information">
+          <view class="information_title">实时电压(V)</view>
+          <view class="information_data">{{voltage}}</view>
+        </view>
+        <view class="information">
+          <view class="information_title">实时电流(A)</view>
+          <view class="information_data">{{current}}</view>
+        </view>
+      </view>
+      <view class="charging" style="width:600rpx">
+        <view class="information">
+          <view class="information_title">已充电量(kwh)</view>
+          <view class="information_data">{{voltage}}</view>
+        </view>
+        <view class="information">
+          <view class="information_title">充电进度(%)</view>
+          <view class="information_data">{{current}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button
+    class="add_overage"
+    style="width: 310rpx"
+    bindtap="chargeClick"
+  >充值
+  </button>
+  <button
+    class="end_charge"
+    style="width: 310rpx"
+    bindtap="endClick"
+  >结束用电
+  </button>
 </view>
 

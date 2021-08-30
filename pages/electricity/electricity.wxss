@@ -1,6 +1,90 @@
-.tips{
-    height:10rpx;
-    font-size:30px;
-    line-height:600rpx;
-    text-align: center;
-  }
+page {
+  background-color: #edece8;
+}
+.tips {
+  height: 10rpx;
+  font-size: 30px;
+  line-height: 600rpx;
+  text-align: center;
+}
+.bill_data {
+  background-color: white;
+  height: 300rpx;
+  width: 700rpx;
+  margin-left: 25rpx;
+  position: relative;
+  margin-top: 10%;
+  flex-direction: inherit;
+}
+.bill_data .bill_data_item {
+  padding: 0rpx 20rpx;
+  height: 75rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #b3afaf;
+}
+.bill_data .bill_data_item .bill_data_item_title {
+  color: #a8a8a8;
+}
+.bill_data .bill_data_content {
+  display: flex;
+  justify-content: space-between;
+}
+.charge_information {
+  background-color: white;
+  height: 350rpx;
+  width: 700rpx;
+  margin-left: 25rpx;
+  position: relative;
+  margin-top: 5%;
+  border-bottom: 1rpx solid gray;
+}
+.charge_information .charge_information_title {
+  margin-top: 20rpx;
+  font-size: 40rpx;
+  text-align: center;
+}
+.charge_information .VA {
+  margin-top: 5%;
+  display: flex;
+  position: absolute;
+  margin-left: 75rpx;
+}
+.charge_information .VA .information {
+  flex: 1;
+  width: 200rpx;
+  border: 1rpx solid #ccc;
+  text-align: center;
+}
+.charge_information .VA .information .information_title {
+  color: grey;
+}
+.charge_information .charging {
+  margin-top: 16%;
+  display: flex;
+  margin-left: 75rpx;
+}
+.charge_information .charging .information {
+  flex: 1;
+  width: 200rpx;
+  border: 1rpx solid #ccc;
+  text-align: center;
+}
+.charge_information .charging .information .information_title {
+  color: grey;
+}
+.add_overage {
+  height: 100rpx;
+  border: 6rpx solid lightblue;
+  border-radius: 100px;
+  font-size: 35rpx;
+  transform: translateX(60%);
+  margin-top: 10%;
+}
+.end_charge {
+  height: 100rpx;
+  border: 6rpx solid lightblue;
+  border-radius: 100px;
+  font-size: 35rpx;
+  transform: translateX(-60%);
+  margin-top: -13%;
+}

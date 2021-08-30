@@ -1,0 +1,15 @@
+.pay_text{
+    text-align: center;
+    font-size: 40rpx;
+    margin-top: 20%;
+}
+.money{
+    text-align: center;
+    font-size: 70rpx;
+}
+.payButton{
+    color: #000;
+    margin-top: 20%;
+    background-color: greenyellow;
+    border:2rpx solid green;
+}

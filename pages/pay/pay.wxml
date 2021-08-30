@@ -1,0 +1,4 @@
+<view class="pay_text">您本次充电共花费:</view>
+<view class="money">{{Money}}元</view>
+<button class="payButton" bindtap="paying">支付</button>
+

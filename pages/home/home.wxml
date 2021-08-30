@@ -1,6 +1,16 @@
-<view class="charging" hidden="{{isConnected}}">扫描二维码开始充电</view>
-<view class="charging" hidden="{{!isConnected}}">充电中</view>
-<view class="countTime" hidden="{{!isConnected}}">{{timecount}}</view>
+<map
+  name="ofoMap"
+  id="ofoMap"
+  style="width:100%;height:900rpx"
+  latitude="{{markers[0].latitude}}"
+  longitude="{{markers[0].longitude}}"
+  markers="{{markers}}"
+  controls="{{controls}}"
+  bindmarkertap="bindmarkertap"
+  bindcontroltap="bindcontroltap"
+  show-location
+>
+</map>
 <view
   class="warn"
   hover-class="none"
@@ -9,34 +19,50 @@
 >
   您当前车型功率大于600瓦,暂不提供充电
 </view>
-<button
-  type="handleClicks"
-  wx:if="{{!isConnected}}"
-  bindtap='scanCode'
-  class="scanButton"
-  style="width:500rpx"
->
-  <image
+<view class="buttom_information">
+  <button
     mode='aspectFill'
-    src='https://z3.ax1x.com/2021/08/21/fvjBNQ.png'
-    plain='true'
-    class='image'
-  ></image>
-</button>
-<button
-  type="handleClicks"
-  wx:elif="{{isConnected}}"
-  bindtap='cancleCharge'
-  class="scanButton"
-  style="width:500rpx"
->
-  <image
-    mode='aspectFill'
-    src='https://z3.ax1x.com/2021/08/21/fxkc0s.png'
-    plain='true'
-    class='image'
-  ></image>
-</button>
-<button class="test" bindtap='addTime'>+1h</button>
-<button class="test1" bindtap='changeType'>当前车的型号为:{{carType}}</button>
+    type="handleClicks"
+    wx:if="{{!isConnected}}"
+    bindtap='scanCode'
+    class="scanButton"
+    style="width:200rpx"
+  >
+    <view class="image">
+      <image
+        src='https://z3.ax1x.com/2021/08/21/fvjBNQ.png'
+        plain='true'
+        class='image'
+      ></image>
+    </view>
+  </button>
+  <button
+    type="handleClicks"
+    wx:elif="{{isConnected}}"
+    bindtap='cancleCharge'
+    class="scanButton"
+    style="width:200rpx"
+  >
+    <view class="image">
+      <image
+        mode='aspectFill'
+        src='https://z3.ax1x.com/2021/08/21/fxkc0s.png'
+        plain='true'
+        class='image'
+      ></image>
+    </view>
+  </button>
+  <view class="chongdian" hidden="{{!isConnected}}">
+    <view class="being_charge">充电中</view>
+    <view class="countTime">{{timecount}}</view>
+    <view
+      class="charging"
+      hover-class="none"
+      hover-stop-propagation="false"
+    >
+      您本次花费的电费为:{{Money}}
+    </view>
+  </view>
+  <view class="scan" hidden="{{isConnected}}">扫描二维码开始充电</view>
+</view>
 

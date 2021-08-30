@@ -1,0 +1,96 @@
+<view
+  class="user_info_wrap"
+  hover-class="none"
+  hover-stop-propagation="false"
+>
+  <view class="user_img_wrap" wx:if="{{userinfo.avatarUrl}}">
+    <image
+      class="user_bg"
+      src=""
+      mode="aspectFit|aspectFill|widthFix"
+      lazy-load="false"
+      binderror=""
+      bindload=""
+    ></image>
+    <view
+      class="user_info"
+      hover-class="none"
+      hover-stop-propagation="false"
+    >
+      <image class="user_icon" src="{{userinfo.avatarUrl}}"></image>
+      <view
+        class="user_name"
+        hover-class="none"
+        hover-stop-propagation="false"
+      >{{userinfo.nickName}}
+      </view>
+    </view>
+  </view>
+  <view
+    wx:else
+    class="user_btn"
+    hover-class="none"
+    hover-stop-propagation="false"
+  >
+    <navigator url="/pages/mine/mine">登录</navigator>
+  </view>
+</view>
+<view
+  class="user_content"
+  hover-class="none"
+  hover-stop-propagation="false"
+>
+  <view
+    class=""
+    hover-class="none"
+    hover-stop-propagation="false"
+  >
+
+  </view>
+  <view
+    class=""
+    hover-class="none"
+    hover-stop-propagation="false"
+  >
+
+  </view>
+  <view
+    class=""
+    hover-class="none"
+    hover-stop-propagation="false"
+  >
+
+  </view>
+  <view class="user_main">
+    <view class="orders_wrap">
+      <view class="order_content">
+        <navigator url="/pages/wallet/wallet">
+          <view class="iconfont icon-qianbao"></view>
+          <view class="order_name">我的钱包</view>
+        </navigator>
+        <navigator>
+          <view class=""></view>
+          <view class="order_name"></view>
+        </navigator>
+        <navigator>
+          <view class=""></view>
+          <view class="order_name"></view>
+        </navigator>
+      </view>
+    </view>
+    <view class="passwordless">开通免密支付</view>
+    <view class="app_info_wrap">
+      <view class="app_info_item app_info_contact">
+        <text >联系客服</text>
+        <text >10086</text>
+      </view>
+      <view class="app_info_item">意见反馈</view>
+      <view class="app_info_item">关于我们</view>
+    </view>
+    <view class="recommend_wrap">
+      把应用推荐给他人
+    </view>
+
+  </view>
+</view>
+

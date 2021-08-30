@@ -1,18 +1,27 @@
 {
   "pages":[
     "pages/home/home",
+    "pages/electricity/electricity",
+    "pages/users/users",
+    "pages/charge/charge",
+    "pages/pay/pay",
+    "pages/mine/mine",   
     "pages/index/index",
     "pages/Demo/Demo",
-    "pages/mine/mine",
-    "pages/electricity/electricity",
+    "pages/wallet/wallet", 
     "pages/logs/logs"
   ],
+  "permission": {
+    "scope.userLocation":{
+      "desc":"你的位置信息将用于智能充电桩小程序"
+    }
+  },
   "window":{
     "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "小程序",
     "navigationBarTextStyle":"black",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": false
   },
   "tabBar": {
     "color": "",
@@ -34,7 +43,7 @@
         "selectedIconPath": "icon/_electricity.png"
       },
       {
-        "pagePath": "pages/mine/mine",
+        "pagePath": "pages/users/users",
         "text": "我的",
         "iconPath": "icon/my.png",
         "selectedIconPath": "icon/_my.png"

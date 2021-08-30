@@ -7,7 +7,30 @@ Page({
      */
     data: {
         Money:app.globalData.Money,
-        isConnected:app.globalData.isConnected
+        isConnected:app.globalData.isConnected,
+        voltage:220,
+        current:1,
+        type: "锂电池"
+    },
+    chargeClick:function name(params) {
+      wx.navigateTo({
+          url: '/pages/wallet/wallet',
+          success: (result)=>{
+              
+          },
+          fail: ()=>{},
+          complete: ()=>{}
+      });
+    },
+    endClick:function name(params) {
+        wx.switchTab({
+            url: '/pages/home/home',
+            success: (result)=>{
+                
+            },
+            fail: ()=>{},
+            complete: ()=>{}
+        });
     },
 
     /**
@@ -28,7 +51,10 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        var that = this
+        that.setData({
+            isConnected:app.globalData.isConnected
+        })
     },
 
     /**

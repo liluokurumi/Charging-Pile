@@ -1,23 +1,11 @@
-// pages/mine/mine.js
+// pages/users/users.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
-    },
-    handleGetUserInfo(e){
-        wx.getUserProfile({
-            desc: '用于完善用户信息',
-            success: (res) => {
-                const userInfo = res.userInfo;
-                wx.setStorageSync(("userInfo"), userInfo);
-                wx.navigateBack({
-                    delta: 1
-                });
-            }
-        })
+        userinfo:{}
     },
 
     /**
@@ -38,7 +26,8 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        const userInfo=wx.getStorageSync("userInfo");
+        this.setData({userinfo: userInfo})
     },
 
     /**
